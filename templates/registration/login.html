@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #f1f1f1;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h2 {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .input-field {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .input-field input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .input-field input:focus {
+      outline: none;
+      border-color: #04AA6D;
+    }
+
+    .btn {
+      background-color: #04AA6D;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    .link {
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .link a {
+      color: #04AA6D;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <h2>Login Form</h2>
+    <form action="/" method="post">
+      {% csrf_token %}
+      <div class="input-field">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" id="username" required>
+      </div>
+
+      <div class="input-field">
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" id="password" required>
+      </div>
+
+      <button type="submit" class="btn">Login</button>
+
+      <!-- <div class="link">
+        <a href="#">Forgot Password?</a>
+      </div> -->
+      <br />
+      <div class="form-group">
+            {% for message in messages %}
+            <div class="alert alert-danger" role="alert">
+                {{message}}
+            </div>
+            {% endfor %}
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

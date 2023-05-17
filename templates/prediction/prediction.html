@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website for improving mental health">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <title>Prediction page</title>
+</head>
+<body>
+    <div class="head" style="background-color: cornflowerblue;">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-dark" style="background-color: cornflowerblue;">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#menubar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menubar">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- <li class="nav-item">
+                            <a href="#" class="nav-link active me-3">HOME</a>
+                        </li> -->
+                        {% if user.is_authenticated %} 
+                        <li class="nav-item">
+                            <a href="logout" class="nav-link me-3">LOG OUT</a>
+                        </li> {% endif %}
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="ms-4">
+        <h5 class="display-5" style="text-align: center;">Thank you for submitting this form</h5>
+        <p class="lead text-success" style="text-align: center;">Prediction part is coming soon. Please stay tuned.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+</body>
+</html>

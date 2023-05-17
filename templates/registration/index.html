@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website for improving mental health">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <title>Home page</title>
+</head>
+<body>
+    <div class="head" style="background-color: cornflowerblue;">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-dark" style="background-color: cornflowerblue;">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#menubar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menubar">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- <li class="nav-item">
+                            <a href="#" class="nav-link active me-3">HOME</a>
+                        </li> -->
+                        {% if user.is_authenticated %} 
+                        <li class="nav-item">
+                            <a href="logout" class="nav-link me-3">LOG OUT</a>
+                        </li> {% endif %}
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="ms-4">
+        <h2 class="display-2">Welcome, {% if user.is_authenticated %} {{user.first_name}} {% endif %}!!!</h2>
+        <p class="lead text-success">It is great to see you make time for yourself , Pick your mental health Goal</p>
+    </div>
+    <hr>
+    <div class="m-3">
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <a href="depression" style="text-decoration: none;color: #000;">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 140px; border-radius: 25px; background-color:plum;">
+                        <p class="lead fs-4">OverComing Depression</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="anxiety" style="text-decoration: none;color: #000;">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 140px; border-radius: 25px; background-color: darksalmon;">
+                        <p class="lead fs-4">Beating Anxiety</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <a href="stress" style="text-decoration: none;color: #000;">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 140px; border-radius: 25px; background-color: burlywood;">
+                        <p class="lead fs-4">Tackling Stress</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex align-items-center justify-content-center" style="height: 140px; border-radius: 25px; background-color: lightcoral;">
+                    <p class="lead fs-4">Managing Anger</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center justify-content-center" style="height: 140px; border-radius: 25px; background-color: lightpink;">
+                    <p class="lead fs-4">Sleeping Better</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex align-items-center justify-content-center" style="height: 140px; border-radius: 25px; background-color: lightgreen;">
+                    <p class="lead fs-4">Living Happier</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+</body>
+</html>
